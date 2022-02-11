@@ -1,0 +1,27 @@
+.footerContainer {
+  width: 100%;
+  height: 4.9375rem;
+
+  border-top: 1px solid #e8e8e8;
+
+  div {
+    max-width: 966px;
+    height: inherit;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+
+      color: var(--black);
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

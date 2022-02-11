@@ -5,8 +5,11 @@
 }
 
 :root {
-  --background: #e5e5e5;
-  --head-background: #fbfbfb;
+  --bg-head-section: #fbfbfb;
+  --bg-card-latest: #e2e2e2;
+  --bg-card-highlight: #f7fafc;
+
+  --white: #ffffff;
   --black: #000000;
 
   --gray-600: #718096;
@@ -14,15 +17,6 @@
   --gray-800: #2d3748;
 
   --purple-700: #6b46c1;
-
-  --white: #ffffff;
-
-  // --gray-100: #e1e1e6;
-  // --gray-300: #a8a8b3;
-  // --gray-900: #121214;
-
-  // --cyan-500: #61dafb;
-  // --yellow-500: #eba417;
 }
 
 @media (max-width: 1080px) {
@@ -37,8 +31,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--white);
+  background: var(--withe);
+  color: var(--black);
 }
 
 body,
@@ -57,5 +51,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-// >>>>>>>>>>>>>>>>> parei aqui <<<<<<<<<<<<<

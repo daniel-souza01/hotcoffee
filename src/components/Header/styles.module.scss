@@ -1,0 +1,48 @@
+.headerContainer {
+  height: 5.3125rem;
+}
+
+.headerContent {
+  max-width: 976px;
+  height: 5.3125rem;
+  margin: 0 93px 0 83px;
+
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black);
+  }
+
+  nav {
+    margin-left: 186px;
+
+    a {
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--black);
+
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &:hover {
+        &::before {
+          border-bottom: 2px solid #000;
+          color: #000;
+          content: 'home';
+          left: 0;
+          max-width: 0;
+          overflow: hidden;
+          // position: absolute;
+          top: 0;
+          transition: max-width 0.5s;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
