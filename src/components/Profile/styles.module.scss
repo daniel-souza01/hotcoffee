@@ -1,0 +1,118 @@
+.userAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.tooltipButtonUserNotLoged {
+  height: 38px;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  border: none;
+
+  font-size: 1rem;
+  line-height: 19px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 1px 6px;
+
+  &:hover {
+    background: rgb(26, 174, 159);
+  }
+}
+
+.tooltipUserLoged {
+  div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 15px 20px 9px;
+    margin-bottom: 10px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      margin-right: 10px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      margin-bottom: 0;
+
+      strong {
+        width: 210px;
+
+        font-size: 1rem;
+        line-height: 19px;
+        font-weight: 500;
+        color: var(--withe);
+        text-align: start;
+        cursor: default;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      p {
+        width: 210px;
+        font-size: 0.9375rem;
+        line-height: 19px;
+        font-weight: 400;
+        color: rgb(195, 207, 217);
+        text-align: start;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        cursor: default;
+      }
+    }
+  }
+
+  .divider {
+    background-color: var(--gray-700);
+    height: 1px;
+    margin: 6px 0px 7px;
+    padding: 0;
+  }
+
+  button {
+    width: 298px;
+    height: 38px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    border: none;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #ffffff;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 1px 6px;
+
+    &:hover {
+      background: rgb(26, 174, 159);
+    }
+  }
+}

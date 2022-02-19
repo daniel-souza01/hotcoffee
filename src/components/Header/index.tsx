@@ -1,4 +1,5 @@
 import { Search } from '../Search'
+import { Profile } from '../Profile'
 
 import styles from './styles.module.scss'
 
@@ -13,11 +14,11 @@ export function Header() {
         <Search />
 
         <nav>
-          <a href="#" className="link" data-hover="Home">
-            Home
-          </a>
+          <a href="#">Home</a>
           <a href="#">Articles</a>
         </nav>
+
+        <Profile />
       </div>
     </header>
   )

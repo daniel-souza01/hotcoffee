@@ -2,11 +2,9 @@ import styles from './styles.module.scss'
 
 export function Search() {
   return (
-    <div className={styles.searchContent}>
-      {/* <img src="" alt="" /> */}
-      {/* <input type="search" placeholder="Search..." /> */}
-
+    <label className={styles.searchContent}>
+      <img src="/icon-search.svg" alt="ícone lupa" />
       <input type="text" name="search" placeholder="Search..." />
-    </div>
+    </label>
   )
 }

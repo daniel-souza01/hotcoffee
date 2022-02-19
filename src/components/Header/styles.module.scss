@@ -5,7 +5,7 @@
 .headerContent {
   max-width: 976px;
   height: 5.3125rem;
-  margin: 0 93px 0 83px;
+  margin: auto;
 
   display: flex;
   align-items: center;
@@ -19,6 +19,7 @@
 
   nav {
     margin-left: 186px;
+    margin-right: 28px;
 
     a {
       font-size: 16px;
@@ -27,21 +28,6 @@
 
       &:first-child {
         margin-right: 30px;
-      }
-
-      &:hover {
-        &::before {
-          border-bottom: 2px solid #000;
-          color: #000;
-          content: 'home';
-          left: 0;
-          max-width: 0;
-          overflow: hidden;
-          // position: absolute;
-          top: 0;
-          transition: max-width 0.5s;
-          white-space: nowrap;
-        }
       }
     }
   }
