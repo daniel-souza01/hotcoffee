@@ -11,14 +11,15 @@ export function Header() {
           <h1>HotCoffee</h1>
         </a>
 
-        <Search />
-
         <nav>
           <a href="#">Home</a>
           <a href="#">Articles</a>
         </nav>
 
-        <Profile />
+        <div className={styles.profileAndSearch}>
+          <Search />
+          <Profile />
+        </div>
       </div>
     </header>
   )
