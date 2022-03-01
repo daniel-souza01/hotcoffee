@@ -10,6 +10,8 @@ import styles from './styles.module.scss'
 export function Profile() {
   const { data: session } = useSession()
 
+  console.log(session)
+
   return session ? (
     <Tooltip
       position="bottom-end"

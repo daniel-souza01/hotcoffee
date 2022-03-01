@@ -12,8 +12,8 @@ export function Header() {
         </a>
 
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Articles</a>
+          <a href="/">Home</a>
+          <a href="/articles">Articles</a>
         </nav>
 
         <div className={styles.profileAndSearch}>
