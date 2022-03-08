@@ -17,6 +17,9 @@
   --gray-800: #2d3748;
 
   --purple-700: #6b46c1;
+
+  --color-blue-hover: #316fea;
+  --color-orange-01: #ff4b33;
 }
 
 @media (max-width: 1080px) {
@@ -61,5 +64,7 @@ a {
 
 ::selection {
   text-shadow: none;
-  background: #64edbf;
+  // background: #64edbf;
+  background: #ffa;
+  color: #383838;
 }

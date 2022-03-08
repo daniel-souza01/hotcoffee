@@ -28,6 +28,12 @@
   &:hover {
     box-shadow: -2px 8px 22px 0 rgb(0 0 0 / 15%);
     transition: all 0.2s ease;
+    transform: translateY(calc(0.75rem * -1));
+    text-decoration: none;
+  }
+
+  &:hover h2 {
+    color: var(--color-blue-hover) !important;
   }
 
   .articleCardImage {

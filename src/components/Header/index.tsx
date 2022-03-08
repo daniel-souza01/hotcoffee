@@ -1,5 +1,6 @@
 import { Search } from '../Search'
 import { Profile } from '../Profile'
+import { ActiveLink } from '../ActiveLink/ActiveLink'
 
 import styles from './styles.module.scss'
 
@@ -12,8 +13,13 @@ export function Header() {
         </a>
 
         <nav>
-          <a href="/">Home</a>
-          <a href="/articles">Articles</a>
+          <ActiveLink activeClassName={styles.active} href="/" passHref>
+            <a>Home</a>
+          </ActiveLink>
+
+          <ActiveLink activeClassName={styles.active} href="/articles" passHref>
+            <a>Articles</a>
+          </ActiveLink>
         </nav>
 
         <div className={styles.profileAndSearch}>
