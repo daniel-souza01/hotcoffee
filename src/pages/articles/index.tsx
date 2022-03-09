@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import * as prismic from '@prismicio/client'
 import { client } from '../../services/prismic'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import styles from './styles.module.scss'
 
@@ -29,24 +30,26 @@ export default function Articles({ articles }: ArticlesProps) {
       <main>
         <div className={styles.feed}>
           {articles.map(article => (
-            <a key={article.slug} href="#" className={styles.articleCard}>
-              <img
-                src={article.banner.url}
-                className={styles.articleCardImage}
-              ></img>
+            <Link href={`/articles/${article.slug}`}>
+              <a key={article.slug} className={styles.articleCard}>
+                <img
+                  src={article.banner.url}
+                  className={styles.articleCardImage}
+                ></img>
 
-              <div className={styles.articleCardContent}>
-                <div className={styles.articleCardHead}>
-                  <h2>{article.title}</h2>
-                  <p>{article.subtitle}</p>
-                </div>
+                <div className={styles.articleCardContent}>
+                  <div className={styles.articleCardHead}>
+                    <h2>{article.title}</h2>
+                    <p>{article.subtitle}</p>
+                  </div>
 
-                <div className={styles.articleCardFooter}>
-                  <p>{article.publicatedAt}</p>
-                  {/* <strong>Read more</strong> */}
+                  <div className={styles.articleCardFooter}>
+                    <time>{article.publicatedAt}</time>
+                    {/* <strong>Read more</strong> */}
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </Link>
           ))}
         </div>
       </main>
