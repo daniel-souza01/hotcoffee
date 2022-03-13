@@ -1,14 +1,16 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import { client } from '../../services/prismic'
+import { client } from '../../../services/prismic'
 import * as prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 
-import { getSession } from 'next-auth/react'
+import { useSession, signIn } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
-import styles from './article.module.scss'
+import styles from '../article.module.scss'
 
-interface ArticleProps {
+interface ArticlePreviewProps {
   article: {
     slug: string
     banner: {
@@ -26,12 +28,18 @@ interface ArticleProps {
   }
 }
 
-export default function Article({ article }: ArticleProps) {
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
+export default function ArticlePreview({ article }: ArticlePreviewProps) {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (session) {
+      router.push(`/articles/${article.slug}`)
+    }
+  }, [session])
+
+  if (status === 'loading') {
+    return <h1>Carregando...</h1>
   }
 
   return (
@@ -51,48 +59,38 @@ export default function Article({ article }: ArticleProps) {
           </div>
 
           <div className={styles.body}>
-            {article.content.map(content => (
-              <div
-                key={content.heading ? content.heading : content.body[0].text}
-                className={styles.bodyContent}
-              >
-                <h2>{content.heading}</h2>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: RichText.asHtml(content.body)
-                  }}
-                ></p>
-              </div>
-            ))}
+            <div className={`${styles.bodyContent} ${styles.previewContent}`}>
+              <h2>{article.content[0]?.heading}</h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: RichText.asHtml(article.content[0]?.body)
+                }}
+              ></p>
+            </div>
+          </div>
+
+          <div
+            className={styles.continueReading}
+            onClick={() => signIn('google')}
+          >
+            Quer continuar lendo?
+            <span>Faça Login </span>
           </div>
         </article>
-
-        <img
-          src="/to-top.svg"
-          alt="back to top button"
-          className={styles.backToTopButton}
-          onClick={() => scrollToTop()}
-        />
       </main>
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  params
-}) => {
-  const { slug } = params
-  const session = await getSession({ req })
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: `/articles/preview/${slug}`,
-        permanent: false
-      }
-    }
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
   }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { slug } = params
 
   const response = await client.getByUID('article', String(slug), {})
 
@@ -122,6 +120,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   return {
     props: {
       article
-    }
+    },
+    revalidate: 60 * 30 // 30 minutes
   }
 }

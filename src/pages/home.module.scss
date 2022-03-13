@@ -330,7 +330,7 @@
 .btnContainer {
   max-width: 966px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   button {
     background: var(--purple-700);

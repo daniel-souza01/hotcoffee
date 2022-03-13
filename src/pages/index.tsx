@@ -1,8 +1,16 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import styles from './home.module.scss'
 
 export default function Home() {
+  const { push } = useRouter()
+
+  function redirectToArticles() {
+    push('/articles')
+    return
+  }
+
   return (
     <>
       <Head>
@@ -115,7 +123,9 @@ export default function Home() {
             </a>
 
             <div className={styles.btnContainer}>
-              <button type="button">See more</button>
+              <button type="button" onClick={() => redirectToArticles()}>
+                See more
+              </button>
             </div>
           </div>
         </section>

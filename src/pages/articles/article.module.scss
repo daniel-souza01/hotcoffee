@@ -113,6 +113,41 @@
           text-decoration: underline;
         }
       }
+
+      &.previewContent {
+        background: linear-gradient(var(--gray-600), transparent);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .continueReading {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid var(--purple-700);
+    font-size: 1.25rem;
+    margin-bottom: 2.6875rem;
+    color: var(--purple-700);
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    span {
+      color: var(--purple-700);
+      margin-left: 0.5rem;
+      font-weight: bold;
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--purple-700);
+    }
+
+    &:hover span {
+      color: var(--white);
+      text-decoration: underline !important;
     }
   }
 }

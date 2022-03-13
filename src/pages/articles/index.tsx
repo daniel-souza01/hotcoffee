@@ -30,8 +30,8 @@ export default function Articles({ articles }: ArticlesProps) {
       <main>
         <div className={styles.feed}>
           {articles.map(article => (
-            <Link href={`/articles/${article.slug}`}>
-              <a key={article.slug} className={styles.articleCard}>
+            <Link key={article.slug} href={`/articles/${article.slug}`}>
+              <a className={styles.articleCard}>
                 <img
                   src={article.banner.url}
                   className={styles.articleCardImage}
