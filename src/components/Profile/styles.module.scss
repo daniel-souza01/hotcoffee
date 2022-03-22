@@ -4,116 +4,84 @@
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
-  margin-left: 9px;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
-.tooltipButtonUserNotLoged {
-  height: 38px;
+.buttonSignIn {
+  width: 100%;
+  padding: 8px 12px;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-800);
+
   background-color: inherit;
-  display: flex;
-  align-items: center;
-  border-radius: 2px;
   border: none;
 
-  font-size: 1rem;
-  line-height: 19px;
-  font-weight: 500;
-  color: #ffffff;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 1px 6px;
-
   &:hover {
-    background: rgb(26, 174, 159);
+    background-color: var(--bg-card-latest);
   }
 }
 
 .tooltipUserLoged {
-  div {
+  .userInfo {
     display: flex;
     align-items: center;
-    white-space: nowrap;
-    padding: 15px 20px 9px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--bg-card-latest);
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 44px;
+      height: 44px;
+      margin-right: 12px;
       border-radius: 50%;
       object-fit: cover;
-
-      margin-right: 10px;
     }
 
     div {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-      margin-bottom: 0;
+      width: 177.1px;
+
+      font-size: 14px;
+      line-height: 1.2;
+      text-align: start;
+      cursor: default;
 
       strong {
-        width: 210px;
-
-        font-size: 1rem;
-        line-height: 19px;
-        font-weight: 500;
-        color: var(--withe);
-        text-align: start;
-        cursor: default;
-
+        font-weight: 600;
+        color: var(--gray-800);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
 
       p {
-        width: 210px;
-        font-size: 0.9375rem;
-        line-height: 19px;
         font-weight: 400;
-        color: rgb(195, 207, 217);
-        text-align: start;
-
+        color: var(--gray-600);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-
-        cursor: default;
       }
     }
   }
 
-  .divider {
-    background-color: var(--gray-700);
-    height: 1px;
-    margin: 6px 0px 7px;
-    padding: 0;
-  }
-
   button {
-    width: 298px;
-    height: 38px;
+    width: 100%;
+    padding: 8px 12px;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    text-align: left;
+
     background-color: inherit;
     display: flex;
     align-items: center;
-    border-radius: 2px;
     border: none;
 
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 500;
-    color: #ffffff;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 1px 6px;
-
     &:hover {
-      background: rgb(26, 174, 159);
+      background-color: var(--bg-card-latest);
     }
   }
 }

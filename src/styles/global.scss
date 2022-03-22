@@ -17,9 +17,6 @@
   --gray-800: #2d3748;
 
   --purple-700: #6b46c1;
-
-  --color-blue-hover: #316fea;
-  --color-orange-01: #ff4b33;
 }
 
 @media (max-width: 1080px) {
@@ -55,16 +52,6 @@ a {
   text-decoration: none;
 }
 
-.tippy-popper .tippy-tooltip.dark-theme {
-  padding: 5px 0;
-  border-radius: 3px;
-  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 25%);
-  background-color: #293845 !important;
-}
-
-::selection {
-  // text-shadow: none;
-  // background: #64edbf;
-  // background: #ffa;
-  // color: #383838;
+.tippy-popper .tippy-tooltip.light-theme {
+  padding: 4px 0;
 }

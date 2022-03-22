@@ -34,14 +34,25 @@ export default function Article({ article }: ArticleProps) {
     })
   }
 
+  function goBack() {
+    window.history.back()
+  }
+
   return (
     <>
       <Head>
-        <title>{article.title} - HotCoffee</title>
+        <title>{article.title} | HotCoffee</title>
       </Head>
 
       <main className={styles.articleContainer}>
         <article className={styles.article}>
+          <img
+            src="/to-top.svg"
+            alt="to go back"
+            className={styles.goBack}
+            onClick={() => goBack()}
+          />
+
           <img src={article.banner.url} />
           <h1>{article.title}</h1>
           <div>

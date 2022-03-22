@@ -17,61 +17,37 @@
     color: var(--black);
   }
 
-  nav {
-    margin-left: 5rem;
-
-    height: 100%;
+  .rightItems {
     display: flex;
     align-items: center;
+    margin-left: auto;
 
-    a {
-      font-size: 16px;
-      line-height: 19px;
-      color: var(--gray-700);
-
-      height: 100%;
+    nav {
       display: flex;
       align-items: center;
-      position: relative;
 
-      &:hover {
-        color: var(--gray-800);
-      }
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--gray-600);
 
-      &:first-child {
-        margin-right: 30px;
-      }
+        &:hover {
+          color: var(--black);
+        }
 
-      &::after {
-        background: var(--gray-800);
-        bottom: 0;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        transition: -webkit-transform 0.25s ease;
-        transition: transform 0.25s ease;
-        transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-        width: 100%;
-      }
+        &:first-child {
+          margin-right: 30px;
+        }
 
-      &:hover:after {
-        transform: scaleX(1);
-      }
+        &:last-child {
+          margin-right: 28px;
+        }
 
-      &.active {
-        color: var(--gray-800);
-      }
-
-      &.active::after {
-        transform: scaleX(1);
+        &.active {
+          color: var(--black);
+        }
       }
     }
-  }
-
-  .profileAndSearch {
-    margin-left: auto;
   }
 }

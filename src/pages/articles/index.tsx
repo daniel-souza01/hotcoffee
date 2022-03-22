@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import * as prismic from '@prismicio/client'
 import { client } from '../../services/prismic'
+
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -24,7 +25,7 @@ export default function Articles({ articles }: ArticlesProps) {
   return (
     <>
       <Head>
-        <title>Articles - HotCoffee</title>
+        <title>Articles | HotCoffee</title>
       </Head>
 
       <main>
@@ -35,7 +36,7 @@ export default function Articles({ articles }: ArticlesProps) {
                 <img
                   src={article.banner.url}
                   className={styles.articleCardImage}
-                ></img>
+                />
 
                 <div className={styles.articleCardContent}>
                   <div className={styles.articleCardHead}>
@@ -45,7 +46,6 @@ export default function Articles({ articles }: ArticlesProps) {
 
                   <div className={styles.articleCardFooter}>
                     <time>{article.publicatedAt}</time>
-                    {/* <strong>Read more</strong> */}
                   </div>
                 </div>
               </a>

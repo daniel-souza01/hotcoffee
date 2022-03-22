@@ -12,18 +12,22 @@ export function Header() {
           <h1>HotCoffee</h1>
         </a>
 
-        <nav>
-          <ActiveLink activeClassName={styles.active} href="/" passHref>
-            <a>Home</a>
-          </ActiveLink>
+        {/* <Search /> */}
 
-          <ActiveLink activeClassName={styles.active} href="/articles" passHref>
-            <a>Articles</a>
-          </ActiveLink>
-        </nav>
+        <div className={styles.rightItems}>
+          <nav>
+            <ActiveLink activeClassName={styles.active} href="/" passHref>
+              <a>Home</a>
+            </ActiveLink>
 
-        <div className={styles.profileAndSearch}>
-          <Search />
+            <ActiveLink
+              activeClassName={styles.active}
+              href="/articles"
+              passHref
+            >
+              <a>Articles</a>
+            </ActiveLink>
+          </nav>
           <Profile />
         </div>
       </div>

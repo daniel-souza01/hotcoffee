@@ -1,8 +1,7 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import { Tooltip } from 'react-tippy'
-import { FcGoogle } from 'react-icons/fc'
-import { RiLogoutBoxRLine } from 'react-icons/ri'
+import { BsXCircle } from 'react-icons/bs'
 
 import 'react-tippy/dist/tippy.css'
 import styles from './styles.module.scss'
@@ -15,10 +14,11 @@ export function Profile() {
       position="bottom-end"
       trigger="click"
       interactive
-      theme="dark"
+      theme="light"
+      arrow
       html={
         <div className={styles.tooltipUserLoged}>
-          <div>
+          <div className={styles.userInfo}>
             <img
               src={session.user.image ? session.user.image : '/avatar.svg'}
               alt="User Avatar"
@@ -29,15 +29,13 @@ export function Profile() {
             </div>
           </div>
 
-          <div className={styles.divider}></div>
-
           <button onClick={() => signOut()}>
-            <RiLogoutBoxRLine
+            <BsXCircle
               style={{
-                color: '#fff',
-                marginRight: '10px'
+                marginRight: '12px',
+                width: '44px'
               }}
-              size={20}
+              size={16}
             />
             Sign Out
           </button>
@@ -45,9 +43,9 @@ export function Profile() {
       }
     >
       <img
-        className={styles.userAvatar}
-        src={session.user.image}
+        src={session.user.image ? session.user.image : '/avatar.svg'}
         alt="User Avatar"
+        className={styles.userAvatar}
       />
     </Tooltip>
   ) : (
@@ -55,27 +53,18 @@ export function Profile() {
       position="bottom-end"
       trigger="click"
       interactive
-      theme="dark"
+      theme="light"
+      arrow
       html={
         <button
+          className={styles.buttonSignIn}
           onClick={() => signIn('google')}
-          className={styles.tooltipButtonUserNotLoged}
         >
-          <FcGoogle
-            style={{
-              backgroundColor: '#fff',
-              borderRadius: '2px',
-              marginRight: '8px',
-              padding: '4px',
-              width: '28px',
-              height: '28px'
-            }}
-          />
-          Sign In with Google
+          Sign In
         </button>
       }
     >
-      <img className={styles.userAvatar} src="/avatar.svg" alt="Avatar" />
+      <img src="/avatar.svg" alt="Avatar" className={styles.userAvatar} />
     </Tooltip>
   )
 }

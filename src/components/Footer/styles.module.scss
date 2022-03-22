@@ -19,12 +19,8 @@
 
       color: var(--black);
 
-      a {
+      span {
         font-weight: bold;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }

@@ -1,9 +1,34 @@
-import Head from 'next/head'
+import { GetStaticProps } from 'next'
+import * as prismic from '@prismicio/client'
+import { client } from '../services/prismic'
 import { useRouter } from 'next/router'
 
-import styles from './home.module.scss'
+import Head from 'next/head'
 
-export default function Home() {
+import styles from './home.module.scss'
+import Link from 'next/link'
+
+type Article = {
+  slug: string
+  banner: {
+    url: string
+  }
+  title: string
+  subtitle: string
+  publicatedAt: string
+}
+
+interface HomeProps {
+  latestArticle: Article
+  panelArticles: Article[]
+  highlightArticle: Article
+}
+
+export default function Home({
+  latestArticle,
+  panelArticles,
+  highlightArticle
+}: HomeProps) {
   const { push } = useRouter()
 
   function redirectToArticles() {
@@ -14,7 +39,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home - Coffee</title>
+        <title>Home | Coffee</title>
       </Head>
 
       <main>
@@ -34,97 +59,68 @@ export default function Home() {
 
         <section>
           <div className={styles.cardsSectionContent}>
-            <a href="#" className={styles.cardLatest}>
-              <div className={styles.cardLatestTexts}>
-                <h2>long established</h2>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that....
-                </p>
-                <div>
-                  <p>May 20th 2020</p>
-                  <strong>Read more</strong>
-                </div>
-              </div>
-
-              <div className={styles.cardLatestImage}></div>
-            </a>
-
-            <div className={styles.cardsPanel}>
-              <a href="#" className={styles.cardsPanelItem}>
-                <div className={styles.cardPanelImage}></div>
-
-                <div className={styles.cardPanelTexts}>
-                  <h2>long established</h2>
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that....
-                  </p>
+            <Link href={`/articles/${latestArticle.slug}`}>
+              <a className={styles.cardLatest}>
+                <div className={styles.cardLatestTexts}>
+                  <h2>{latestArticle.title}</h2>
+                  <p>{latestArticle.subtitle}</p>
                   <div>
-                    <p>May 20th 2020</p>
-                    <strong>Read more</strong>
+                    <time>{latestArticle.publicatedAt}</time>
                   </div>
                 </div>
+
+                <img
+                  src={latestArticle.banner.url}
+                  className={styles.cardLatestImage}
+                />
               </a>
+            </Link>
 
-              <a href="#" className={styles.cardsPanelItem}>
-                <div className={styles.cardPanelImage2}></div>
+            <div className={styles.articlesPanel}>
+              {panelArticles.map(article => (
+                <Link key={article.slug} href={`/articles/${article.slug}`}>
+                  <a className={styles.articleCard}>
+                    <img
+                      src={article.banner.url}
+                      className={styles.articleCardImage}
+                    />
 
-                <div className={styles.cardPanelTexts}>
-                  <h2>long established</h2>
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that....
-                  </p>
-                  <div>
-                    <p>May 20th 2020</p>
-                    <strong>Read more</strong>
-                  </div>
-                </div>
-              </a>
+                    <div className={styles.articleCardContent}>
+                      <div className={styles.articleCardHead}>
+                        <h2>{article.title}</h2>
+                        <p>{article.subtitle}</p>
+                      </div>
 
-              <a href="#" className={styles.cardsPanelItem}>
-                <div className={styles.cardPanelImage3}></div>
-
-                <div className={styles.cardPanelTexts}>
-                  <h2>long established</h2>
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that....
-                  </p>
-                  <div>
-                    <p>May 20th 2020</p>
-                    <strong>Read more</strong>
-                  </div>
-                </div>
-              </a>
+                      <div className={styles.articleCardFooter}>
+                        <time>{article.publicatedAt}</time>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              ))}
             </div>
 
-            <a href="#" className={styles.cardHighlight}>
-              <div className={styles.cardHighlightTexts}>
-                <h2>What is Lorem Ipsum?</h2>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution...
-                </p>
-                <div>
-                  <p>May 20</p>
-                  <strong>Read more</strong>
+            <Link href={`/articles/${highlightArticle.slug}`}>
+              <a className={styles.cardHighlight}>
+                <div className={styles.cardHighlightTexts}>
+                  <h2>{highlightArticle.title}</h2>
+                  <p>{highlightArticle.subtitle}</p>
+                  <div>
+                    <time>{highlightArticle.publicatedAt}</time>
+                  </div>
                 </div>
-              </div>
 
-              <div className={styles.cardHighlightImage}></div>
-            </a>
+                <img
+                  src={highlightArticle.banner.url}
+                  className={styles.cardHighlightImage}
+                />
+              </a>
+            </Link>
 
             <div className={styles.btnContainer}>
               <button type="button" onClick={() => redirectToArticles()}>
                 See more
+                <img src="/arrow-button.svg" />
               </button>
             </div>
           </div>
@@ -132,4 +128,36 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const responseArticles = await client.get({
+    predicates: prismic.predicate.at('document.type', 'article'),
+    fetch: ['article.title', 'article.subtitle', 'article.banner']
+  })
+
+  const formattedArticles = responseArticles.results.map(article => {
+    return {
+      slug: article.uid,
+      banner: article.data.banner,
+      title: article.data.title,
+      subtitle: article.data.subtitle,
+      publicatedAt: new Date(article.first_publication_date).toLocaleDateString(
+        'pt-br',
+        {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric'
+        }
+      )
+    }
+  })
+
+  const latestArticle = formattedArticles[formattedArticles.length - 1]
+  const panelArticles = formattedArticles.slice(0, 3)
+  const highlightArticle = formattedArticles[3]
+
+  return {
+    props: { latestArticle, panelArticles, highlightArticle }
+  }
 }

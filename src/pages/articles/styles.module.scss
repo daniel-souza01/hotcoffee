@@ -22,18 +22,13 @@
   flex-direction: column;
   align-items: center;
 
-  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%);
-  transition: all 0.5s ease;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s,
+    -webkit-transform 0.2s;
 
   &:hover {
-    box-shadow: -2px 8px 22px 0 rgb(0 0 0 / 15%);
-    transition: all 0.2s ease;
-    transform: translateY(calc(0.75rem * -1));
-    text-decoration: none;
-  }
-
-  &:hover h2 {
-    color: var(--color-blue-hover) !important;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
   }
 
   .articleCardImage {
@@ -93,28 +88,6 @@
         line-height: 0.9375rem;
         color: var(--gray-700);
         margin: 0;
-      }
-
-      strong {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 0.9375rem;
-        padding-bottom: 4px;
-
-        color: var(--gray-800);
-
-        &:hover {
-          background-image: repeating-linear-gradient(
-            270deg,
-            rgb(158, 173, 186),
-            rgb(158, 173, 186) 2px,
-            transparent 2px,
-            transparent 4px
-          );
-          background-repeat: no-repeat;
-          background-position: 0px 100%;
-          background-size: 100% 2px;
-        }
       }
     }
   }
