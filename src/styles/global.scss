@@ -53,5 +53,7 @@ a {
 }
 
 .tippy-popper .tippy-tooltip.light-theme {
-  padding: 4px;
+  border: 1px solid var(--bg-card-latest);
+  border-radius: 7px;
+  padding: 8px;
 }

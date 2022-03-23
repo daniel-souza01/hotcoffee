@@ -1,11 +1,3 @@
-.userAvatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
 .buttonSignIn {
   width: 100%;
   padding: 8px 12px;
@@ -23,65 +15,40 @@
 }
 
 .tooltipUserLoged {
-  .userInfo {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  h2 {
+    font-size: 19px;
+    color: var(--black);
+    font-weight: 600;
+    text-align: left;
+    cursor: default;
+
+    padding: 8px 8px 14px 8px;
     border-bottom: 1px solid var(--bg-card-latest);
 
-    img {
-      width: 44px;
-      height: 44px;
-      margin-right: 12px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      width: 177.1px;
-
-      font-size: 14px;
-      line-height: 1.2;
-      text-align: start;
-      cursor: default;
-
-      strong {
-        font-weight: 600;
-        color: var(--gray-800);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      p {
-        font-weight: 400;
-        color: var(--gray-600);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   button {
-    width: 100%;
-    padding: 8px 12px;
-
-    font-size: 0.875rem;
+    font-size: 17px;
+    color: var(--gray-700);
     font-weight: 500;
-    color: var(--gray-800);
     text-align: left;
 
-    background-color: inherit;
-    display: flex;
-    align-items: center;
     border: none;
+    background-color: inherit;
+    padding: 8px;
+    margin-top: 8px;
+
+    transition: color 0.15s ease-in;
 
     &:hover {
-      background-color: var(--bg-card-latest);
+      color: var(--black);
     }
   }
 }

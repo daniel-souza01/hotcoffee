@@ -18,6 +18,7 @@
     "nprogress": "^0.2.0",
     "prismic-dom": "^2.2.7",
     "react": "17.0.2",
+    "react-avatar": "^4.0.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-tippy": "^1.4.0",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.15",
+    "@types/nprogress": "^0.2.0",
     "@types/prismic-dom": "^2.1.1",
     "@types/react": "^17.0.39",
     "@types/react-modal": "^3.13.1",

@@ -1,7 +1,8 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import { Tooltip } from 'react-tippy'
-import { BsXCircle } from 'react-icons/bs'
+import { FaSignOutAlt, FaUserAlt } from 'react-icons/fa'
+import Avatar from 'react-avatar'
 
 import 'react-tippy/dist/tippy.css'
 import styles from './styles.module.scss'
@@ -18,53 +19,39 @@ export function Profile() {
       arrow
       html={
         <div className={styles.tooltipUserLoged}>
-          <div className={styles.userInfo}>
-            <img
-              src={session.user.image ? session.user.image : '/avatar.svg'}
-              alt="User Avatar"
+          <h2>
+            <FaUserAlt
+              style={{
+                marginRight: '5px',
+                height: '14px'
+              }}
             />
-            <div>
-              <strong>{session.user.name}</strong>
-              <p>{session.user.email}</p>
-            </div>
-          </div>
+            {session.user.name}
+          </h2>
 
           <button onClick={() => signOut()}>
-            <BsXCircle
+            <FaSignOutAlt
               style={{
-                marginRight: '12px',
-                width: '44px'
+                marginRight: '5px',
+                height: '12px'
               }}
-              size={16}
             />
             Sign Out
           </button>
         </div>
       }
     >
-      <img
-        src={session.user.image ? session.user.image : '/avatar.svg'}
-        alt="User Avatar"
-        className={styles.userAvatar}
+      <Avatar
+        name={session.user.name}
+        src={session.user.image ? session.user.image : ''}
+        size="38"
+        round={true}
+        style={{ cursor: 'pointer' }}
       />
     </Tooltip>
   ) : (
-    <Tooltip
-      position="bottom-end"
-      trigger="click"
-      interactive
-      theme="light"
-      arrow
-      html={
-        <button
-          className={styles.buttonSignIn}
-          onClick={() => signIn('google')}
-        >
-          Sign In
-        </button>
-      }
-    >
-      <img src="/avatar.svg" alt="Avatar" className={styles.userAvatar} />
-    </Tooltip>
+    <button className={styles.buttonSignIn} onClick={() => signIn('google')}>
+      Sign In
+    </button>
   )
 }
