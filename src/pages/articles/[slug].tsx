@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { client } from '../../services/prismic'
 import * as prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
+import { DisqusComments } from '../../components/DisqusComments/DisqusComments'
 
 import { getSession } from 'next-auth/react'
 
@@ -77,6 +78,8 @@ export default function Article({ article }: ArticleProps) {
             ))}
           </div>
         </article>
+
+        <DisqusComments article={article} />
 
         <img
           src="/to-top.svg"
