@@ -1,7 +1,7 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import { Tooltip } from 'react-tippy'
-import { FaSignOutAlt, FaUserAlt } from 'react-icons/fa'
+import { FaSignOutAlt, FaUser } from 'react-icons/fa'
 import Avatar from 'react-avatar'
 
 import 'react-tippy/dist/tippy.css'
@@ -17,10 +17,11 @@ export function Profile() {
       interactive
       theme="light"
       arrow
+      arrowSize="big"
       html={
         <div className={styles.tooltipUserLoged}>
           <h2>
-            <FaUserAlt
+            <FaUser
               style={{
                 marginRight: '5px',
                 height: '14px'
@@ -50,7 +51,7 @@ export function Profile() {
       />
     </Tooltip>
   ) : (
-    <button className={styles.buttonSignIn} onClick={() => signIn('google')}>
+    <button className={styles.signInButton} onClick={() => signIn('google')}>
       Sign In
     </button>
   )

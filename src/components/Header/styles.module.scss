@@ -32,6 +32,8 @@
         line-height: 19px;
         color: var(--gray-600);
 
+        transition: color 0.15s ease-in;
+
         &:hover {
           color: var(--black);
         }
