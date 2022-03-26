@@ -36,7 +36,7 @@ export default function ArticlePreview({ article }: ArticlePreviewProps) {
     if (session) {
       router.push(`/articles/${article.slug}`)
     }
-  }, [session])
+  }, [session, router, article.slug])
 
   if (status === 'loading') {
     return <h1>Carregando...</h1>

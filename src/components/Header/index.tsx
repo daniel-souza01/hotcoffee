@@ -9,8 +9,8 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <Link href="/">
-          <h1>HotCoffee</h1>
+        <Link href="/" passHref>
+          <a>HotCoffee</a>
         </Link>
 
         {/* <Search /> */}
