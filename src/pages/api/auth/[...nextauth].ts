@@ -29,5 +29,6 @@ export default NextAuth({
   session: {
     maxAge: 30 * 24 * 60 * 60 // 30 days
   },
-  adapter: FaunaAdapter(client)
+  adapter: FaunaAdapter(client),
+  secret: process.env.NEXTAUTH_SECRET
 })

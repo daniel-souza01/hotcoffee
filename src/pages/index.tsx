@@ -39,7 +39,7 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Home | Coffee</title>
+        <title>Home | HotCoffee</title>
       </Head>
 
       <main>
