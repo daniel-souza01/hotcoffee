@@ -36,6 +36,7 @@ export default function Articles({ articles }: ArticlesProps) {
                 <img
                   src={article.banner.url}
                   className={styles.articleCardImage}
+                  alt=""
                 />
 
                 <div className={styles.articleCardContent}>

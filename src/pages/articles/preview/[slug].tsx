@@ -61,7 +61,7 @@ export default function ArticlePreview({ article }: ArticlePreviewProps) {
             onClick={() => goBack()}
           />
 
-          <img src={article.banner.url} />
+          <img src={article.banner.url} alt="" />
           <h1>{article.title}</h1>
           <div>
             <strong>{article.author}</strong>

@@ -12,7 +12,7 @@ export function Footer() {
 
         <p>
           Developed by{' '}
-          <a href="https://github.com/daniel-souza01" target={'_blank'}>
+          <a href="https://github.com/daniel-souza01">
             Daniel Souza <FaGithub />
           </a>
         </p>

@@ -72,6 +72,7 @@ export default function Home({
                 <img
                   src={latestArticle.banner.url}
                   className={styles.cardLatestImage}
+                  alt=""
                 />
               </a>
             </Link>
@@ -83,6 +84,7 @@ export default function Home({
                     <img
                       src={article.banner.url}
                       className={styles.articleCardImage}
+                      alt=""
                     />
 
                     <div className={styles.articleCardContent}>
@@ -113,6 +115,7 @@ export default function Home({
                 <img
                   src={highlightArticle.banner.url}
                   className={styles.cardHighlightImage}
+                  alt=""
                 />
               </a>
             </Link>
@@ -120,7 +123,7 @@ export default function Home({
             <div className={styles.btnContainer}>
               <button type="button" onClick={() => redirectToArticles()}>
                 See more
-                <img src="/arrow-button.svg" />
+                <img src="/arrow-button.svg" alt="arrow right" />
               </button>
             </div>
           </div>
