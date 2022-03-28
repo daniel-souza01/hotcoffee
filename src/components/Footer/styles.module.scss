@@ -34,3 +34,9 @@
     justify-content: space-evenly !important;
   }
 }
+
+@media (max-width: 326px) {
+  .footerContent p {
+    font-size: 0.9375rem !important;
+  }
+}
