@@ -1,14 +1,11 @@
 .feed {
   max-width: 940px;
-  margin: auto;
-  margin-top: 40px;
-
-  // display: flex;
-  // flex-wrap: wrap;
+  width: 90%;
+  margin: 40px auto;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 40px;
 }
 
 .articleCard {
@@ -16,7 +13,6 @@
   // height: 391px;
   background: var(--white);
   border-radius: 5px;
-  margin: 0 20px 40px;
 
   display: flex;
   flex-direction: column;
@@ -32,16 +28,17 @@
   }
 
   .articleCardImage {
-    width: 430px;
+    width: 100%;
     height: 200px;
-
     object-fit: cover;
   }
 
   .articleCardContent {
-    max-width: 380px;
+    // max-width: 380px;
     height: 100%;
     margin-top: 1.125rem;
+
+    padding: 0 25px 25px;
 
     display: flex;
     flex-direction: column;
@@ -49,7 +46,7 @@
 
     .articleCardHead {
       h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
         line-height: 1.5rem;
         font-weight: bold;
 
@@ -63,7 +60,7 @@
       }
 
       p {
-        font-size: 15px;
+        font-size: 0.9375rem;
         line-height: 1.0625rem;
         color: var(--gray-600);
 
@@ -81,10 +78,9 @@
       display: flex;
       justify-content: space-between;
       margin-top: 1.375rem;
-      margin-bottom: 25px;
 
       time {
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 0.9375rem;
         color: var(--gray-700);
         margin: 0;

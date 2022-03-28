@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 export function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <div>
+      <div className={styles.footerContent}>
         <p>
           <span>hotcoffee</span> 2022 copyright all rights reserved
         </p>

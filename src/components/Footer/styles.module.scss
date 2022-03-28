@@ -3,8 +3,9 @@
   height: 4.9375rem;
   border-top: 1px solid #e8e8e8;
 
-  div {
+  .footerContent {
     max-width: 966px;
+    width: 90%;
     height: inherit;
     margin: auto;
 
@@ -22,5 +23,14 @@
         font-weight: bold;
       }
     }
+  }
+}
+
+// ================ media queries =======================
+
+@media (max-width: 684px) {
+  .footerContent {
+    flex-direction: column;
+    justify-content: space-evenly !important;
   }
 }
