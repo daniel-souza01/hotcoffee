@@ -1,13 +1,14 @@
 import { GetStaticProps } from 'next'
 import * as prismic from '@prismicio/client'
 import { client } from '../../services/prismic'
+import { api } from '../../services/api'
+import { useState } from 'react'
 
 import Head from 'next/head'
 import Link from 'next/link'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import styles from './styles.module.scss'
-import { useState } from 'react'
-import { api } from '../../services/api'
 
 type Article = {
   slug: string
@@ -53,34 +54,46 @@ export default function Articles({ articles, nextPages }: ArticlesProps) {
 
       <main>
         <div className={styles.feed}>
-          {allArticles.map(article => (
-            <Link key={article.slug} href={`/articles/${article.slug}`}>
-              <a className={styles.articleCard}>
-                <img
-                  src={article.banner.url}
-                  className={styles.articleCardImage}
-                  alt=""
-                />
+          <InfiniteScroll
+            dataLength={allArticles.length}
+            next={handleLoadNextPages}
+            hasMore={nextPage && true}
+            loader={<h4>Loading...</h4>}
+            endMessage={
+              <p
+                style={{
+                  textAlign: 'center',
+                  gridColumn: '1 / -1',
+                  fontSize: '1rem'
+                }}
+              >
+                <b>Yay! You have seen it all</b>
+              </p>
+            }
+          >
+            {allArticles.map(article => (
+              <Link key={article.slug} href={`/articles/${article.slug}`}>
+                <a className={styles.articleCard}>
+                  <img
+                    src={article.banner.url}
+                    className={styles.articleCardImage}
+                    alt=""
+                  />
 
-                <div className={styles.articleCardContent}>
-                  <div className={styles.articleCardHead}>
-                    <h2>{article.title}</h2>
-                    <p>{article.subtitle}</p>
+                  <div className={styles.articleCardContent}>
+                    <div className={styles.articleCardHead}>
+                      <h2>{article.title}</h2>
+                      <p>{article.subtitle}</p>
+                    </div>
+
+                    <div className={styles.articleCardFooter}>
+                      <time>{article.publicatedAt}</time>
+                    </div>
                   </div>
-
-                  <div className={styles.articleCardFooter}>
-                    <time>{article.publicatedAt}</time>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          ))}
-
-          {nextPage && (
-            <button type="button" onClick={handleLoadNextPages}>
-              Carregar mais posts
-            </button>
-          )}
+                </a>
+              </Link>
+            ))}
+          </InfiniteScroll>
         </div>
       </main>
     </>

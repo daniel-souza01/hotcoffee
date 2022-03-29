@@ -55,3 +55,10 @@ a {
 .tippy-popper .tippy-tooltip.light-theme {
   padding: 8px;
 }
+
+.infinite-scroll-component {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr)) !important;
+  gap: 40px !important;
+  overflow: visible !important;
+}
