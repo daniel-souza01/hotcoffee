@@ -1,54 +1,48 @@
 .articleContainer {
-  width: 1152px;
+  max-width: 1152px;
+  width: 100%;
   margin: auto;
-  position: relative;
 
-  .backToTopButton {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+  .goBackContainer {
+    max-width: 973px;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
 
-    right: 71px;
-    bottom: 15px;
+    .goBack {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin-bottom: 32px;
+      transform: rotate(-90deg);
 
-    transition: filter 0.2s;
+      transition: filter 0.2s;
 
-    &:hover {
-      filter: brightness(0.9);
+      &:hover {
+        filter: brightness(0.9);
+      }
     }
+  }
+
+  .banner {
+    display: block;
+    max-width: 973px;
+    width: 100%;
+    height: 380.37px;
+    object-fit: cover;
+    margin: auto;
   }
 }
 
 .article {
   max-width: 973px;
+  width: 90%;
   margin: auto;
-  margin-top: 15px;
-
-  .goBack {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    margin-bottom: 32px;
-    transform: rotate(-90deg);
-
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.9);
-    }
-  }
-
-  img {
-    width: 973px;
-    height: 380.37px;
-    object-fit: cover;
-  }
 
   h1 {
     font-weight: bold;
-    font-size: 45px;
-    line-height: 54px;
+    font-size: 2.8125rem;
+    line-height: 3.375rem;
     color: var(--gray-800);
     max-width: 765px;
     margin: auto;
@@ -68,22 +62,22 @@
 
     strong {
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
 
       color: var(--gray-800);
     }
 
     time {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       color: var(--gray-600);
       margin-left: 25px;
     }
 
     .divider {
       border: 1px solid #e8e7e7;
-      width: 760px;
+      width: 100%;
       margin-top: 30.5px;
     }
   }
@@ -114,8 +108,8 @@
 
       strong {
         font-weight: bold;
-        font-size: 16px;
-        line-height: 19.36px;
+        font-size: 1rem;
+        line-height: 1.21rem;
 
         color: var(--gray-700);
       }
@@ -164,6 +158,28 @@
 
     &:hover {
       filter: brightness(0.9);
+    }
+  }
+
+  .backToTopContainer {
+    max-width: 973px;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-end;
+
+    .backToTopButton {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin-bottom: 15px;
+
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
     }
   }
 }

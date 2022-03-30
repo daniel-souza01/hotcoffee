@@ -46,15 +46,18 @@ export default function Article({ article }: ArticleProps) {
       </Head>
 
       <main className={styles.articleContainer}>
-        <article className={styles.article}>
+        <div className={styles.goBackContainer}>
           <img
             src="/to-top.svg"
             alt="to go back"
             className={styles.goBack}
             onClick={() => goBack()}
           />
+        </div>
 
-          <img src={article.banner.url} alt="" />
+        <img className={styles.banner} src={article.banner.url} alt="" />
+
+        <article className={styles.article}>
           <h1>{article.title}</h1>
           <div>
             <strong>{article.author}</strong>
@@ -77,16 +80,18 @@ export default function Article({ article }: ArticleProps) {
               </div>
             ))}
           </div>
+
+          <DisqusComments article={article} />
+
+          <div className={styles.backToTopContainer}>
+            <img
+              src="/to-top.svg"
+              alt="back to top button"
+              className={styles.backToTopButton}
+              onClick={() => scrollToTop()}
+            />
+          </div>
         </article>
-
-        <DisqusComments article={article} />
-
-        <img
-          src="/to-top.svg"
-          alt="back to top button"
-          className={styles.backToTopButton}
-          onClick={() => scrollToTop()}
-        />
       </main>
     </>
   )
