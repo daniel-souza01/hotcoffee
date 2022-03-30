@@ -136,7 +136,8 @@ export default function Home({
 export const getStaticProps: GetStaticProps = async () => {
   const responseArticles = await client.get({
     predicates: prismic.predicate.at('document.type', 'article'),
-    fetch: ['article.title', 'article.subtitle', 'article.banner']
+    fetch: ['article.title', 'article.subtitle', 'article.banner'],
+    orderings: 'document.last_publication_date desc'
   })
 
   const formattedArticles = responseArticles.results.map(article => {
@@ -156,11 +157,12 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   })
 
-  const latestArticle = formattedArticles[formattedArticles.length - 1]
-  const panelArticles = formattedArticles.slice(0, 3)
-  const highlightArticle = formattedArticles[3]
+  const latestArticle = formattedArticles[0]
+  const panelArticles = formattedArticles.slice(1, 4)
+  const highlightArticle = formattedArticles[4]
 
   return {
-    props: { latestArticle, panelArticles, highlightArticle }
+    props: { latestArticle, panelArticles, highlightArticle },
+    revalidate: 60 * 30 // 30 minutes
   }
 }

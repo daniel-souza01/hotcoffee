@@ -58,17 +58,10 @@ export default function Articles({ articles, nextPages }: ArticlesProps) {
             dataLength={allArticles.length}
             next={handleLoadNextPages}
             hasMore={nextPage && true}
-            loader={<h4>Loading...</h4>}
-            endMessage={
-              <p
-                style={{
-                  textAlign: 'center',
-                  gridColumn: '1 / -1',
-                  fontSize: '1rem'
-                }}
-              >
-                <b>Yay! You have seen it all</b>
-              </p>
+            loader={
+              <h4 className={styles.spinnerContainer}>
+                <div className={styles.spinner} />
+              </h4>
             }
           >
             {allArticles.map(article => (
@@ -104,8 +97,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const response = await client.get({
     predicates: prismic.predicate.at('document.type', 'article'),
     fetch: ['article.title', 'article.subtitle', 'article.banner'],
-    pageSize: 6
-    // orderings: '[document.last_publication_date desc]'
+    pageSize: 4,
+    orderings: 'document.last_publication_date desc'
   })
 
   const articles = response.results.map(article => {

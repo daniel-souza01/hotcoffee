@@ -32,7 +32,7 @@
 
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1031;
   top: 15px;
@@ -82,9 +82,8 @@
 
 // =================== media queries =================
 
-@media (max-width: 1024px) {
-  #nprogress .spinner {
-    right: 50%;
-    left: 50%;
+@media (max-width: 768px) {
+  #nprogress .bar {
+    height: 4px;
   }
 }
