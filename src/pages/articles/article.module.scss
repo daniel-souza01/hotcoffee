@@ -180,20 +180,6 @@
 
 // ========================= media queries =================
 
-@media (max-width: 768px) {
-  .banner {
-    // height: 380.37px;
-    height: 300px !important;
-  }
-
-  .article h1 {
-    // font-size: 2.8125rem;
-    // line-height: 3.375rem;
-    font-size: 2.1875rem;
-    line-height: 2.75rem;
-  }
-}
-
 @media (max-width: 500px) {
   .goBackContainer {
     margin-top: 7.5px !important;
@@ -204,23 +190,17 @@
   }
 
   .banner {
-    height: 220px !important;
+    height: 300px !important;
   }
 
   .article h1 {
-    font-size: 1.75rem;
-    line-height: 2.3125rem;
-    margin-top: 20.84px;
-  }
-
-  .body {
-    margin-bottom: 40px !important;
+    font-size: 2rem;
+    line-height: 2.5625rem;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 370px) {
   .continueReading {
     font-size: 1rem !important; // 16px
-    padding: 1.625rem !important; // 26px
   }
 }
