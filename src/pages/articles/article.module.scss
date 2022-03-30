@@ -47,12 +47,6 @@
     max-width: 765px;
     margin: auto;
     margin-top: 41.63px;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines to show */
-    -webkit-box-orient: vertical;
   }
 
   div {
@@ -181,5 +175,53 @@
         filter: brightness(0.9);
       }
     }
+  }
+}
+
+// ========================= media queries =================
+
+@media (max-width: 768px) {
+  .banner {
+    // height: 380.37px;
+    height: 300px !important;
+  }
+
+  .article h1 {
+    // font-size: 2.8125rem;
+    // line-height: 3.375rem;
+    font-size: 2.1875rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .goBackContainer {
+    margin-top: 7.5px !important;
+
+    .goBack {
+      margin-bottom: 16px !important;
+    }
+  }
+
+  .banner {
+    height: 220px !important;
+  }
+
+  .article h1 {
+    font-size: 1.75rem;
+    line-height: 2.3125rem;
+    margin-top: 20.84px;
+  }
+
+  .body {
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .continueReading {
+    font-size: 1rem !important; // 16px
+    padding: 1.625rem !important; // 26px
   }
 }

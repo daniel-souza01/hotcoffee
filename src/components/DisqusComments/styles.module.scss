@@ -6,3 +6,11 @@
 
   border-top: 2px solid #e8e7e7;
 }
+
+// ========================= media queries =================
+
+@media (max-width: 500px) {
+  .disqusContainer {
+    padding: 29px 0 16px 0 !important;
+  }
+}
