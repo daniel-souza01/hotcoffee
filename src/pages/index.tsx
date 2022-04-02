@@ -50,82 +50,84 @@ export default function Home({
                 Make better coffee{' '}
                 <img src="/icon-coffee.svg" alt="icon coffee" />
               </h1>
-              <p>why learn how to blog?</p>
+              <p>reading an article</p>
             </div>
 
-            <img src="/head-ilustration.svg" alt="ilustration" />
+            <img
+              className={styles.ilustration}
+              src="/head-ilustration.svg"
+              alt="ilustration"
+            />
           </div>
         </section>
 
-        <section>
-          <div className={styles.cardsSectionContent}>
-            <Link href={`/articles/${latestArticle.slug}`}>
-              <a className={styles.cardLatest}>
-                <div className={styles.cardLatestTexts}>
-                  <h2>{latestArticle.title}</h2>
-                  <p>{latestArticle.subtitle}</p>
-                  <div>
-                    <time>{latestArticle.publicatedAt}</time>
-                  </div>
+        <section className={styles.cardsSectionContent}>
+          <Link href={`/articles/${latestArticle.slug}`}>
+            <a className={styles.cardLatest}>
+              <div className={styles.cardLatestTexts}>
+                <h2>{latestArticle.title}</h2>
+                <p>{latestArticle.subtitle}</p>
+                <div>
+                  <time>{latestArticle.publicatedAt}</time>
                 </div>
+              </div>
 
-                <img
-                  src={latestArticle.banner.url}
-                  className={styles.cardLatestImage}
-                  alt=""
-                />
-              </a>
-            </Link>
+              <img
+                src={latestArticle.banner.url}
+                className={styles.cardLatestImage}
+                alt=""
+              />
+            </a>
+          </Link>
 
-            <div className={styles.articlesPanel}>
-              {panelArticles.map(article => (
-                <Link key={article.slug} href={`/articles/${article.slug}`}>
-                  <a className={styles.articleCard}>
-                    <img
-                      src={article.banner.url}
-                      className={styles.articleCardImage}
-                      alt=""
-                    />
+          <div className={styles.articlesPanel}>
+            {panelArticles.map(article => (
+              <Link key={article.slug} href={`/articles/${article.slug}`}>
+                <a className={styles.articleCard}>
+                  <img
+                    src={article.banner.url}
+                    className={styles.articleCardImage}
+                    alt=""
+                  />
 
-                    <div className={styles.articleCardContent}>
-                      <div className={styles.articleCardHead}>
-                        <h2>{article.title}</h2>
-                        <p>{article.subtitle}</p>
-                      </div>
-
-                      <div className={styles.articleCardFooter}>
-                        <time>{article.publicatedAt}</time>
-                      </div>
+                  <div className={styles.articleCardContent}>
+                    <div className={styles.articleCardHead}>
+                      <h2>{article.title}</h2>
+                      <p>{article.subtitle}</p>
                     </div>
-                  </a>
-                </Link>
-              ))}
-            </div>
 
-            <Link href={`/articles/${highlightArticle.slug}`}>
-              <a className={styles.cardHighlight}>
-                <div className={styles.cardHighlightTexts}>
-                  <h2>{highlightArticle.title}</h2>
-                  <p>{highlightArticle.subtitle}</p>
-                  <div>
-                    <time>{highlightArticle.publicatedAt}</time>
+                    <div className={styles.articleCardFooter}>
+                      <time>{article.publicatedAt}</time>
+                    </div>
                   </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+
+          <Link href={`/articles/${highlightArticle.slug}`}>
+            <a className={styles.cardHighlight}>
+              <div className={styles.cardHighlightTexts}>
+                <h2>{highlightArticle.title}</h2>
+                <p>{highlightArticle.subtitle}</p>
+                <div>
+                  <time>{highlightArticle.publicatedAt}</time>
                 </div>
+              </div>
 
-                <img
-                  src={highlightArticle.banner.url}
-                  className={styles.cardHighlightImage}
-                  alt=""
-                />
-              </a>
-            </Link>
+              <img
+                src={highlightArticle.banner.url}
+                className={styles.cardHighlightImage}
+                alt=""
+              />
+            </a>
+          </Link>
 
-            <div className={styles.btnContainer}>
-              <button type="button" onClick={() => redirectToArticles()}>
-                See more
-                <img src="/arrow-button.svg" alt="arrow right" />
-              </button>
-            </div>
+          <div className={styles.btnContainer}>
+            <button type="button" onClick={() => redirectToArticles()}>
+              See more
+              <img src="/arrow-button.svg" alt="arrow right" />
+            </button>
           </div>
         </section>
       </main>
