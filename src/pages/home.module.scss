@@ -139,11 +139,10 @@
   height: auto;
   margin-top: 2.6875rem;
 
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  // gap: 33px;
-  // // gap: 20px;
-  // justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 33px;
+  justify-items: center;
 
   .articleCard {
     max-width: 300px;

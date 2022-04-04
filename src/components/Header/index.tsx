@@ -1,4 +1,3 @@
-import { Search } from '../Search'
 import { Profile } from '../Profile'
 import { ActiveLink } from '../ActiveLink/ActiveLink'
 import Link from 'next/link'
@@ -12,8 +11,6 @@ export function Header() {
         <Link href="/" passHref>
           <a>HotCoffee</a>
         </Link>
-
-        {/* <Search /> */}
 
         <div className={styles.rightItems}>
           <nav>

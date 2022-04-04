@@ -5,10 +5,8 @@ import { useRouter } from 'next/router'
 
 import Head from 'next/head'
 import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 import styles from './home.module.scss'
-import 'swiper/css'
 
 type Article = {
   slug: string
@@ -83,53 +81,32 @@ export default function Home({
           </Link>
 
           <div className={styles.articlesPanel}>
-            <Swiper
-              spaceBetween={33}
-              slidesPerView={1.2}
-              breakpoints={{
-                445: {
-                  slidesPerView: 1.8
-                  // spaceBetween: 20
-                },
-                640: {
-                  slidesPerView: 2.2
-                  // spaceBetween: 20
-                },
-                768: {
-                  slidesPerView: 2.5
-                  // spaceBetween: 40
-                },
-                1024: {
-                  slidesPerView: 3
-                  // spaceBetween: 50
-                }
-              }}
-            >
-              {panelArticles.map(article => (
-                <SwiperSlide>
-                  <Link key={article.slug} href={`/articles/${article.slug}`}>
-                    <a className={styles.articleCard}>
-                      <img
-                        src={article.banner.url}
-                        className={styles.articleCardImage}
-                        alt=""
-                      />
+            {panelArticles.map(article => (
+              <Link
+                key={article.slug}
+                href={`/articles/${article.slug}`}
+                passHref
+              >
+                <a className={styles.articleCard}>
+                  <img
+                    src={article.banner.url}
+                    className={styles.articleCardImage}
+                    alt=""
+                  />
 
-                      <div className={styles.articleCardContent}>
-                        <div className={styles.articleCardHead}>
-                          <h2>{article.title}</h2>
-                          <p>{article.subtitle}</p>
-                        </div>
+                  <div className={styles.articleCardContent}>
+                    <div className={styles.articleCardHead}>
+                      <h2>{article.title}</h2>
+                      <p>{article.subtitle}</p>
+                    </div>
 
-                        <div className={styles.articleCardFooter}>
-                          <time>{article.publicatedAt}</time>
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                    <div className={styles.articleCardFooter}>
+                      <time>{article.publicatedAt}</time>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            ))}
           </div>
 
           <Link href={`/articles/${highlightArticle.slug}`}>
