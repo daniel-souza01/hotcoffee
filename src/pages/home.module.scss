@@ -78,6 +78,7 @@
     max-width: 403.09px;
 
     margin-left: 3.375rem;
+    margin-right: 3.375rem;
 
     h2 {
       font-size: 1.875rem;
@@ -124,6 +125,7 @@
   .cardLatestImage {
     max-width: 27.0775rem;
     max-height: 15.1875rem;
+    min-width: 30%;
 
     object-fit: cover;
 
@@ -350,6 +352,138 @@
 
     .ilustration {
       order: -1;
+    }
+  }
+}
+
+@media (max-width: 592px) {
+  .cardLatest {
+    flex-direction: column;
+    height: 382px;
+    max-width: 430px;
+    min-width: 250px;
+    margin: auto;
+    margin-top: 33px;
+
+    border: none;
+    box-shadow: 0px 4px 4px rgba(192, 189, 189, 0.25);
+
+    .cardLatestTexts {
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 18px 16px 24px;
+
+      h2 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+
+      p {
+        -webkit-line-clamp: 4; /* number of lines to show */
+        margin-top: 0.9375rem;
+      }
+
+      div {
+        margin-top: 30px;
+      }
+    }
+
+    .cardLatestImage {
+      order: -1;
+      max-width: 430px;
+      max-height: 179px;
+    }
+  }
+
+  .articlesPanel {
+    margin-top: 33px;
+
+    .articleCard {
+      max-width: 430px;
+
+      .articleCardImage {
+        max-width: 430px;
+      }
+    }
+  }
+
+  .cardHighlight {
+    flex-direction: column;
+    height: 382px;
+    max-width: 430px;
+    min-width: 250px;
+    margin: auto;
+    margin-top: 33px;
+
+    background: var(--white);
+    box-shadow: 0px 4px 4px rgba(192, 189, 189, 0.25);
+
+    .cardHighlightTexts {
+      max-width: none;
+      height: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 18px 16px 24px;
+
+      h2 {
+        -webkit-line-clamp: 2; /* number of lines to show */
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: var(--gray-800);
+      }
+
+      p {
+        -webkit-line-clamp: 4; /* number of lines to show */
+        margin-top: 0.9375rem;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+      }
+
+      div {
+        margin-top: 30px;
+
+        time {
+          font-size: 0.75rem;
+          line-height: 0.9375rem;
+          color: var(--gray-600);
+        }
+      }
+    }
+
+    .cardHighlightImage {
+      order: -1;
+      max-width: 430px;
+      max-height: 179px;
+    }
+  }
+
+  .btnContainer {
+    max-width: 430px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 345px) {
+  .headSectionContent {
+    div {
+      h1 {
+        font-size: 3.1875rem;
+        line-height: 3.9375rem;
+
+        img {
+          transform: rotate(-23.28deg);
+          width: 50px;
+          height: 47px;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+      }
     }
   }
 }
