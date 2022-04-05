@@ -54,3 +54,17 @@
     }
   }
 }
+
+.userAvatar {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+// ================ media queries =================
+
+@media (max-width: 375px) {
+  .userAvatar {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}

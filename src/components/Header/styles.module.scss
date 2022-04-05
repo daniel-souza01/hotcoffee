@@ -54,3 +54,35 @@
     }
   }
 }
+
+// ================ media queries =================
+
+@media (max-width: 425px) {
+  .rightItems nav a {
+    &:first-child {
+      margin-right: 26px !important;
+    }
+
+    &:last-child {
+      margin-right: 24px !important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .headerContent a {
+    font-size: 18px !important;
+  }
+
+  .rightItems nav a {
+    font-size: 14px !important;
+
+    &:first-child {
+      margin-right: 22px !important;
+    }
+
+    &:last-child {
+      margin-right: 20px !important;
+    }
+  }
+}

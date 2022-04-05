@@ -43,6 +43,7 @@ export function Profile() {
       }
     >
       <Avatar
+        className={styles.userAvatar}
         name={session.user.name}
         src={session.user.image ? session.user.image : ''}
         size="38"
