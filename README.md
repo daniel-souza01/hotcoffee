@@ -1,5 +1,20 @@
 <div id="top"></div>
 
+<!-- PROJECT SHIELDS -->
+<p align="center">
+  <a href="https://www.linkedin.com/in/danielsouzadev/" title="acessar linkedin do autor">
+    <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=33cc95&labelColor=5429cc&style=for-the-badge&logo=appveyor" alt="License">   
+ </a>
+  
+  <a href="https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE" title="acessar licença">
+    <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="License"> 
+  </a>
+  
+  <a href="https://www.linkedin.com/in/danielsouzadev/" title="acessar linkedin do autor">
+    <img  src="https://img.shields.io/static/v1?label=Linkedin&message= &style=for-the-badge&logo=linkedin" alt="License">   
+ </a>
+</p>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -29,23 +44,12 @@
   <ol>
     <li>
       <a href="#sobre-o-projeto">Sobre o projeto</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#construído-com">Construído com</a></li>
+    <li><a href="#deploy">Deploy</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -72,14 +76,16 @@ O dt money:heavy_dollar_sign: é uma aplicação de controle de finanças pessoa
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- FUNCIONALIDADES -->
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 - [x] Os usuários podem cadastrar transações;
 - [x] Todas as transações são exibidas em uma tabela;
 - [x] É mostrado um resumo com todas as entradas, saídas e o total de dinheiro.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- CONSTRUIDO COM -->
-## 🛠 Construído com
+## Construído com
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -100,11 +106,14 @@ Utilitários
 - [React Modal](https://github.com/reactjs/react-modal)
 - [Polished](https://github.com/styled-components/polished)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- DEPLOY -->
 ## Deploy
 
 <img alt="gif dt money" src="src/assets/Screencast 2021-10-24 14_26_54.gif">
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
