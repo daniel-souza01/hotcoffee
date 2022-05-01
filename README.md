@@ -2,16 +2,16 @@
 
 <!-- PROJECT SHIELDS -->
 <p align="center">
-  <a href="https://www.linkedin.com/in/danielsouzadev/" title="acessar linkedin do autor">
-    <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=33cc95&labelColor=5429cc&style=for-the-badge&logo=appveyor" alt="License">   
+  <a href="https://github.com/daniel-souza01">
+    <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=blue&style=for-the-badge" alt="author">   
  </a>
   
-  <a href="https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE" title="acessar licença">
+  <a href="https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE">
     <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="License"> 
   </a>
   
-  <a href="https://www.linkedin.com/in/danielsouzadev/" title="acessar linkedin do autor">
-    <img  src="https://img.shields.io/static/v1?label=Linkedin&message= &style=for-the-badge&logo=linkedin" alt="License">   
+  <a href="https://www.linkedin.com/in/daniel-souza01/">
+    <img  src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="linkedin author">   
  </a>
 </p>
 
@@ -132,3 +132,7 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-url]: https://linkedin.com/in/othneildrew
+
