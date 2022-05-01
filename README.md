@@ -111,7 +111,7 @@ Utilitários
 <!-- DEPLOY -->
 ## Deploy
 
-<img alt="gif dt money" src="src/assets/Screencast 2021-10-24 14_26_54.gif">
+<p>:rocket: Este projeto já está em produção: <a href="https://blog-hotcoffee.vercel.app/"><strong>Ver agora »</strong></a></p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
