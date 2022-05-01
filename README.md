@@ -6,7 +6,7 @@
     <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=blue&style=for-the-badge" alt="author">   
  </a>
   
-  <a href="https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE">
+  <a href="https://github.com/daniel-souza01/hotcoffee/blob/main/LICENSE">
     <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="License"> 
   </a>
   
