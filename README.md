@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -13,60 +15,71 @@
     <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+<!--     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
   </p>
 </div>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
+<!-- ABOUT THE PROJECT -->
+## Sobre o projeto
 
+<img alt="print home hotcoffee" src="https://github.com/daniel-souza01/assets/blob/08543ff0f56553c4524284079f7a6ea7cba59922/imgs_repos/screenshot-hotcoffee.png" />
 
-<p align="center">
-  <img alt="dt money" src="./src/assets/logo.svg" width="160px">
-</p>
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="center">
-  <a href="https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE" title="acessar licença">
-    <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=33cc95&labelColor=5429cc" alt="License"> 
-  </a>
-  
-  <a href="https://www.linkedin.com/in/danielsouzadev/" title="acessar linkedin do autor">
-    <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=33cc95&labelColor=5429cc" alt="License">   
- </a>
-</p>
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-<h1 align="center" title="dt money">
-    <img alt="dt money" src="./src/assets/capa.svg" />
-</h1>
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
 
-<h4 align="center"> 
-	:tada: Concluído :tada:
-</h4>
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-<p align="center">
- <a href="#-sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-como-executar-o-projeto">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-autores">Autores</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-licença">Licença</a>
-</p>
-
-## 💻 Sobre o projeto
+Use the `BLANK_README.md` to get started.
 
 O dt money:heavy_dollar_sign: é uma aplicação de controle de finanças pessoais onde o usuário pode gerenciar entradas e saídas de dinheiro.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- FUNCIONALIDADES -->
 ## ⚙️ Funcionalidades
 
 - [x] Os usuários podem cadastrar transações;
 - [x] Todas as transações são exibidas em uma tabela;
 - [x] É mostrado um resumo com todas as entradas, saídas e o total de dinheiro.
 
-## 🛠 Tecnologias
+<!-- CONSTRUIDO COM -->
+## 🛠 Construído com
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -87,46 +100,26 @@ Utilitários
 - [React Modal](https://github.com/reactjs/react-modal)
 - [Polished](https://github.com/styled-components/polished)
 
-## 🎨 Layout
+<!-- DEPLOY -->
+## Deploy
 
 <img alt="gif dt money" src="src/assets/Screencast 2021-10-24 14_26_54.gif">
 
-## 🚀 Como executar o projeto
 
-### Pré-requisitos
+<!-- LICENSE -->
+## License
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/). feito isso, agora basta seguir os passos abaixo.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-### Passo a passo
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-```bash
 
-# Clone este repositório
-$ git clone git@github.com:DanielSouz4/dt-money.git
 
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd dt-money
+<!-- CONTACT -->
+## Contact
 
-# Instale as dependências
-$ npm install
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-```
-
-A aplicação será aberta na porta:3000 - acesse [`localhost:3000`](http://localhost:3000)
-
-## 🦸 Autores
-
-- [@DanielSouz4](https://github.com/DanielSouz4)
-
-- [@Rocketseat](https://github.com/Rocketseat)
-
-## 📝 Licença
-
-Este projeto esta sobe a licença [MIT](https://github.com/DanielSouz4/dt-money/blob/880aaa08efed337cded8b2dbf8ac232d02f89f08/LICENSE).
-
-Feito por Daniel Souza 👋🏽 [Entre em contato!](https://www.linkedin.com/in/danielsouzadev/)
+<p align="right">(<a href="#top">back to top</a>)</p>
