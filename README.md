@@ -3,11 +3,11 @@
 <!-- PROJECT SHIELDS -->
 <p align="center">
   <a href="https://github.com/daniel-souza01">
-    <img  src="https://img.shields.io/static/v1?label=feito por&message=Daniel Souza&color=blue&style=for-the-badge" alt="author">   
+    <img  src="https://img.shields.io/static/v1?label=made by&message=Daniel Souza&color=blue&style=for-the-badge" alt="author">   
  </a>
   
   <a href="https://github.com/daniel-souza01/hotcoffee/blob/main/LICENSE">
-    <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="License"> 
+    <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="license"> 
   </a>
   
   <a href="https://www.linkedin.com/in/daniel-souza01/">
@@ -19,22 +19,17 @@
 <br />
 <div align="center">
   <a href="https://github.com/daniel-souza01/hotcoffee">
-    <img src="https://github.com/daniel-souza01/assets/blob/2d006c4d278b324a7fb82358dd109eb1fcc817d8/imgs_repos/icon-hotcoffee.png" alt="Logo Hotcoffee" width="80" height="80">
+    <img src="https://github.com/daniel-souza01/assets/blob/2d006c4d278b324a7fb82358dd109eb1fcc817d8/imgs_repos/icon-hotcoffee.png" alt="logo hotcoffee" width="80" height="80">
   </a>
 
   <h3 align="center">Hotcoffee</h3>
 
   <p align="center">
-    Um blog minimalista feito com React.js e Next.js!
+    A minimalist blog made with React.js, Next.js and more!
     <br />
     <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
     <br />
     <br />
-<!--     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
   </p>
 </div>
 
@@ -43,9 +38,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <a href="#about-the-project">About The Project</a>
     </li>
-    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#construído-com">Construído com</a></li>
     <li><a href="#deploy">Deploy</a></li>
     <li><a href="#license">License</a></li>
@@ -54,29 +49,16 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## Sobre o projeto
+## About The Project
 
 <img alt="print home hotcoffee" src="https://github.com/daniel-souza01/assets/blob/08543ff0f56553c4524284079f7a6ea7cba59922/imgs_repos/screenshot-hotcoffee.png" />
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-O dt money:heavy_dollar_sign: é uma aplicação de controle de finanças pessoais onde o usuário pode gerenciar entradas e saídas de dinheiro.
+Hotcoffee :coffee: is a fully usable minimalist blog with many features. This web application was made with many modern tools and concepts like SSR, SSG, and JAMStack.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- FUNCIONALIDADES -->
-## Funcionalidades
+<!-- Features -->
+## Features
 
 - [x] Os usuários podem cadastrar transações;
 - [x] Todas as transações são exibidas em uma tabela;
