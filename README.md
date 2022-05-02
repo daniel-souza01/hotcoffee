@@ -41,7 +41,7 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#construído-com">Construído com</a></li>
+    <li><a href="#build-with">Build With</a></li>
     <li><a href="#deploy">Deploy</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -65,22 +65,32 @@ Hotcoffee :coffee: is a fully usable minimalist blog with many features. This we
 - [x] Use of a `CMS(Prismic CMS)` to manage and serve the content of articles;
 - [x] Implementation of an `infinite-scroll` for more performance application;
 - [x] Implementation of comments in articles using the `Disqus` plugin;
-- [ ] Transition animation between pages done with `Nprogress`;
+- [x] Transition animation between pages done with `Nprogress`;
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONSTRUIDO COM -->
-## Construído com
+<!-- BUILT WITH -->
+## Build With
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in building the project:
 
-- [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Styled Components](https://styled-components.com/)
-- [MirageJS](https://miragejs.com/)
+- [Sass](https://sass-lang.com/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Prsmic CMS](https://prismic.io/)
+- [Fauna DB](https://fauna.com/)
 - [Axios](https://github.com/axios/axios)
-- [Context API](#)
-- [React Hooks](#)
+
+
+- [react-tippy](https://github.com/tvkhoa/react-tippy)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [Disqus](https://disqus.com/)
+- [Nprogress](https://www.npmjs.com/package/nprogress)
+- [react-avatar](https://www.npmjs.com/package/react-avatar)
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [Google Fonts](https://fonts.google.com/)
 
 > Veja o arquivo [package.json](https://github.com/DanielSouz4/dt-money/blob/0508643803398b6f0856fe23a9bc201817dda711/package.json)
 
