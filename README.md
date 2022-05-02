@@ -28,9 +28,9 @@
     A minimalist blog made with React.js, Next.js and more!
     <br />
     <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
+    <h4 align="center">:rocket: In production :rocket:</h4>
     <br />
     <br />
-    <h3 align="center">:rocket: In production :rocket:</h3>
   </p>
 </div>
 
