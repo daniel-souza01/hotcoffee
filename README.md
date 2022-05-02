@@ -60,9 +60,12 @@ Hotcoffee :coffee: is a fully usable minimalist blog with many features. This we
 <!-- Features -->
 ## Features
 
-- [x] Os usuários podem cadastrar transações;
-- [x] Todas as transações são exibidas em uma tabela;
-- [x] É mostrado um resumo com todas as entradas, saídas e o total de dinheiro.
+- [x] Using `Next.js` for a modern, feature-rich web application;
+- [x] Authentication system made with `NextAuth.js` in conjunction with `FaunaDB` for user storage;
+- [x] Use of a `CMS(Prismic CMS)` to manage and serve the content of articles;
+- [x] Implementation of an `infinite-scroll` for more performance application;
+- [x] Implementation of comments in articles using the `Disqus` plugin;
+- [ ] Transition animation between pages done with `Nprogress`;
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
