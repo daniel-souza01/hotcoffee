@@ -25,7 +25,7 @@
   <h3 align="center">Hotcoffee</h3>
 
   <p align="center">
-    A minimalist blog made with React.js, Next.js and more!
+    A minimalistic and modern blog made with React.js, Next.js and more!
     <br />
     <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
     <h4 align="center">:rocket: In production :rocket:</h4>
