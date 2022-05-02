@@ -30,6 +30,7 @@
     <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
     <br />
     <br />
+    <h3 align="center">:rocket: In production :rocket:</h3>
   </p>
 </div>
 
@@ -53,7 +54,7 @@
 
 <img alt="print home hotcoffee" src="https://github.com/daniel-souza01/assets/blob/08543ff0f56553c4524284079f7a6ea7cba59922/imgs_repos/screenshot-hotcoffee.png" />
 
-Hotcoffee :coffee: is a fully usable minimalist blog with many features. This web application was made with many modern tools and concepts like SSR, SSG, and JAMStack.
+Hotcoffee :coffee: is a fully usable minimalist blog with many features. This web application was made with many modern tools and concepts like `SSR`, `SSG`, and `JAMStack`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -83,6 +84,7 @@ The following tools were used in building the project:
 - [Fauna DB](https://fauna.com/)
 - [Axios](https://github.com/axios/axios)
 
+Utilities
 
 - [react-tippy](https://github.com/tvkhoa/react-tippy)
 - [react-icons](https://react-icons.github.io/react-icons/)
@@ -92,28 +94,21 @@ The following tools were used in building the project:
 - [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
 - [Google Fonts](https://fonts.google.com/)
 
-> Veja o arquivo [package.json](https://github.com/DanielSouz4/dt-money/blob/0508643803398b6f0856fe23a9bc201817dda711/package.json)
-
-Utilitários
-
-- [Create React App](https://create-react-app.dev/)
-- [Google Fonts](https://fonts.google.com/)
-- [React Modal](https://github.com/reactjs/react-modal)
-- [Polished](https://github.com/styled-components/polished)
+> See the file [package.json](https://github.com/daniel-souza01/hotcoffee/blob/main/package.json)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- DEPLOY -->
 ## Deploy
 
-<p>:rocket: Este projeto já está em produção: <a href="https://blog-hotcoffee.vercel.app/"><strong>Ver agora »</strong></a></p>
+Project in production :rocket: published by **vercel**: <a href="https://blog-hotcoffee.vercel.app/"><strong>View demo now »</strong></a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See the file <a href="https://github.com/daniel-souza01/hotcoffee/blob/main/LICENSE.txt">`LICENSE.txt`</a> for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -122,9 +117,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Daniel Souza - [danielsouza51764@gmail.com](mailto:danielsouza51764@gmail.com)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/daniel-souza01/hotcoffee](https://github.com/daniel-souza01/hotcoffee)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
